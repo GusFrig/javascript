@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Verificação de país</h1>
+    Digite sua nacionalidade:<input type="text" id="nacionalidade" name="nacionalidade">
+    <input type="button" value="Verificação" onclick="verific()">
+    <div id="indent">
+
+    </div>
+    <script>
+      
+        function verific()
+        {
+            var nacional= window.document.getElementById('nacionalidade')
+            var inden= window.document.getElementById('indent')
+            var nacionali= String(nacional.value)
+            inden.innerHTML= `Sua nacionalidade é  ` + nacionali
+            if(nacionali=='Brasileiro' || nacionali=='brasileiro')
+            {
+                inden.innerHTML += '<p>Você é brasileiro, seja bem-vindo!</P>'
+            }
+            else if(nacionali==0)
+            {
+                inden.innerHTML +='<p> Diga sua nacionalidade!</p>'
+            }
+            else
+            {
+                inden.innerHTML += '<p> você é estrangeiro, seja bem-vindo!</p>'
+            }
+        }
+        
+    </script>
+</body>
+</html>
